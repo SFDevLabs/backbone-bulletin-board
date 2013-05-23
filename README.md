@@ -1,11 +1,11 @@
-Bullatin Board Demo
+BackBone Bullatin Board Demo
 ===================
 
 https://github.com/jeffj/Bullatin_Board_Board
 
 #### A demo of Backbone Webapp with Server API (CRUD) and Authentication.
 
-DEMO [node.js](http://nodejs.org/#download)
+[See a DEMO](http://bbb.sfdevlabs.org/)
 
 ## Introduction
 
