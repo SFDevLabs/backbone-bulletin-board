@@ -1,0 +1,11 @@
+name: Bulletin Board
+
+mem: 128M
+
+framework:
+  type: node
+
+services:
+  todos: mongodb
+
+ignores: ['node_modules', '.git']

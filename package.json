@@ -1,0 +1,24 @@
+{
+    "name": "Bulletin-Board-backbone-node-mongo-passpport",
+    "author": "Jeff Jenkins",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "dependencies": {
+        "express": "3.0.0alpha1",
+        "jade": "*",
+        "mongoose": "*",
+        "stylus": "*"
+        , "connect-mongo": "latest"
+        , "connect-flash": "latest"
+        , "passport": "latest"
+        , "passport-local": "latest"
+        , "passport-facebook": "latest"
+        , "passport-twitter": "latest"
+        , "passport-github": "latest"
+        , "passport-google-oauth": "latest"
+        , "nodemon": "latest"
+    }
+}
