@@ -1,0 +1,109 @@
+body {
+  font-family: Helvetica Neue;
+}
+button {
+  font-size: 1.1em;
+}
+h1 {
+  margin: 5px;
+}
+#list {
+  list-style: none;
+  border-top: 1px solid;
+  margin-top: 25px;
+  border-color: #eee;
+}
+#new-post {
+  border: none;
+}
+#new-post-title {
+  font-size: 20px;
+}
+#new-post-body {
+  font-size: 20px;
+}
+header a {
+  margin-left: 5px;
+}
+.heading {
+  text-align: center;
+  margin: 20px;
+}
+.form-box {
+  margin: auto;
+  width: 300px;
+}
+.form-box input {
+  width: 100%;
+}
+.form-box textarea {
+  width: 100%;
+}
+.form-box .submit {
+  float: right;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+.logo {
+  text-align: center;
+}
+.view {
+  position: relative;
+  border-bottom: 1px solid #777;
+  border-color: #eee;
+  margin: 5px;
+  padding: 5px;
+}
+.title {
+  text-align: center;
+}
+.username {
+  text-align: right;
+  color: #999;
+}
+.login-prompt {
+  width: 100%;
+  text-align: center;
+}
+.control-box {
+  position: absolute;
+  right: 0px;
+}
+.control-box a {
+  text-decoration: none;
+  padding: 3px;
+  font-size: 1.2em;
+}
+.main-auth {
+  margin: auto;
+  width: 400px;
+}
+.loginOptions {
+  float: right;
+}
+.body-edit {
+  display: none;
+}
+.title-edit {
+  display: none;
+}
+.submit-update {
+  display: none;
+}
+.editing .body-edit {
+  display: inline-block;
+}
+.editing .title-edit {
+  display: inline-block;
+}
+.editing .body {
+  display: none;
+}
+.editing .title {
+  display: none;
+}
+.editing .submit-update {
+  display: inline-block;
+}
