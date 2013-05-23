@@ -1,11 +1,11 @@
-node-backbone-mongo
+Bullatin Board Demo
 ===================
 
 https://github.com/jeffj/Bullatin_Board_Board
 
-# Bullatin Board Demo
+#### A demo of Backbone Webapp with Server API (CRUD) and Authentication.
 
-#### A demo of Backbone Webapp with Server CRUD API and Authentication.
+DEMO [node.js](http://nodejs.org/#download)
 
 ## Introduction
 
@@ -52,7 +52,7 @@ $ sudo npm start
 
 [Based on Backbone MVC](https://github.com/jamesor/todomvc/tree/939bf7a47d297562cfb61c453320dea281e24e83/labs/architecture-examples/backbone_node_mongo)
 
-- [Jeff Jenkins](http://jenkinsj.com/) - Added the Authentication Layer
+- [Jeff Jenkins](http://jenkinsj.com/) - Added Authentication to App
 
 ## License
 
