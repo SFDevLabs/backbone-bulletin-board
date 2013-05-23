@@ -1,0 +1,48 @@
+extends layout
+block styles
+  link(rel='stylesheet', href='/stylesheets/todos.css')
+block content
+    #app
+      
+      .heading
+        h1.mainheading
+          | Bulletin Board Demo
+        .subheader
+          | Backbone.js with a CRUD API and Auth
+      .form-box
+        if (typeof username!="undefined") 
+            input#new-post-title(type="text", placeholder="Title")
+            br
+            textarea#new-post-body(type="text", placeholder="Body")
+            button.submit(href="javascript:null;")
+              | Submit
+        else
+          br
+          .login-prompt
+            a(href="/login")
+              | Login to Post!
+        br
+        br
+      section#main
+        div#list
+  script
+    userid="#{userid}";
+
+block bodyscripts
+  script#item-template(type="text/template")
+    |<div class="view">
+    |  <div class="control-box">
+    |  <% if (myPost == true) { %>
+    |  <a class="edit" href="javascript:null;" class="destroy">&#9998;</a>
+    |  <a class="destroy" href="javascript:null;" class="destroy">&#10006;</a>
+    |  <% } %> 
+    |  </div> 
+    |  <h3 class="title" ><%= title %></h3>
+    |  <div class="body" ><%= body %></div>
+    |  <input class="title-edit" placeholder"Title"></input>
+    |  <br>
+    |  <textarea class="body-edit" placeholder"Body"></textarea>
+    |  <div class="username" >- <%= user.username %></div>
+    |  <button href="javascript:null;"class="submit-update">Update</button>  
+    |</div>
+  script(type="text/javascript", src="javascripts/todos.js")
