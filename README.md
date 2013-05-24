@@ -3,13 +3,13 @@ BackBone Bullatin Board Demo
 
 https://github.com/jeffj/Bullatin_Board_Board
 
-#### A demo of Backbone Webapp with Server API (CRUD) and Authentication.
+#### A demo of Backbone.js and Node with Authentication.
 
 [See a DEMO](http://sfdevlabs.com:3000/)
 
 ## Introduction
 
-This demo was written to illustrate how authentication can be added to a synced Backbone.js app.
+This demo was written to illustrate how authentication can be added to multi-user Backbone.js app.
 
 #### Technologies Used In This Demo
 
@@ -52,7 +52,9 @@ $ sudo npm start
 
 [Based on Backbone MVC](https://github.com/jamesor/todomvc/tree/939bf7a47d297562cfb61c453320dea281e24e83/labs/architecture-examples/backbone_node_mongo)
 
-- [Jeff Jenkins](http://jenkinsj.com/) - Added Authentication to App
+- [Jeff Jenkins](http://jenkinsj.com/) - Added Authentication Layer
+- [Jehan Trembeck](http://jehantremback.com/) - FrontEnd
+
 
 ## License
 
