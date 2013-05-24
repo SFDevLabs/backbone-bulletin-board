@@ -1,7 +1,7 @@
-BackBone Bullatin Board Demo
+Backbone Bullatin Board Demo
 ===================
 
-#### A demo of Backbone.js and Node with Authentication.
+#### A demo of Backbone.js and Node with authentication.
 
 [See a DEMO](http://sfdevlabs.com:3000/)
 
@@ -34,13 +34,13 @@ $ mongod
 ```
 4. Change the working directory to the project root:
 ```
-$ cd <path to todosmvc directory>
+$ cd <path to directory>
 ```
 4. Install dependencies using the node package manger (npm).
 ```
 $ sudo npm install
 ```
-5. Start the Todos demo server from a different terminal window:
+5. Start the server.
 ```
 $ sudo npm start
 ```
