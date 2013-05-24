@@ -16,8 +16,8 @@ $(function ($, _, Backbone) {
     // Default attributes for the todo item.
     defaults: function () {
       return {
-        title: "empty post...",
-        done: false
+        title: "empty post..."
+        , done: false
       };
     },
 
@@ -183,7 +183,7 @@ $(function ($, _, Backbone) {
       create();
     },
     create:function(){
-      Posts.create({title: this.inputTitle.val(),body: this.inputBody.val(), myPost:true, user: {username:"jeffj"}});
+      Posts.create({createdAt:new Date(), title: this.inputTitle.val(),body: this.inputBody.val(), myPost:true, user: {username:"jeffj"}});
       this.inputTitle.val('');
       this.inputBody.val('');
     }
