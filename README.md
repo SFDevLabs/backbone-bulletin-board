@@ -1,8 +1,6 @@
 BackBone Bullatin Board Demo
 ===================
 
-https://github.com/jeffj/Bullatin_Board_Board
-
 #### A demo of Backbone.js and Node with Authentication.
 
 [See a DEMO](http://sfdevlabs.com:3000/)
@@ -53,8 +51,7 @@ $ sudo npm start
 [Based on Backbone MVC](https://github.com/jamesor/todomvc/tree/939bf7a47d297562cfb61c453320dea281e24e83/labs/architecture-examples/backbone_node_mongo)
 
 - [Jeff Jenkins](http://jenkinsj.com/) - Added Authentication Layer
-- [Jehan Trembeck](http://jehantremback.com/) - FrontEnd
-
+- [Jehan Trembeck](http://jehantremback.com/) - Backbone and FrontEnd
 
 ## License
 
