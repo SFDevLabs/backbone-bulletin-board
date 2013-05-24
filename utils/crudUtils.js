@@ -33,7 +33,7 @@
 
   function parseResults(result, user){
   var id 
-  if (user) id==user._id; //setting the id if it exists;
+  if (user) id=user._id; //setting the id if it exists;
    for (var i = result.length - 1; i >= 0; i--) { 
       if(String(id)==result[i].user || String(id)==result[i].user._id)
         result[i].myPost=true;
@@ -54,7 +54,6 @@
         if (!err) {
           var sender=m.toJSON()
           sender.user={username:req.user.username}
-          console.log(sender)
           res.send(sender);
         } else {
           res.send(errMsg(err));
@@ -83,38 +82,27 @@
   //
   function getUpdateController(model) {
     return function (req, res) {
-      model.findById(req.params.id, function (err, result) {
-        var key;
-        for (key in req.body) {
-          if ("user"!=key)
+        var result=req.post, key;
+        for (key in req.body) { //Update the keys
+          if ("user"!=key)  //ignore the user key
           result[key] = req.body[key];
         }
-
         result.save(function (err) {
           if (!err) {
             var sender=result.toObject()
             if (req.user.username) sender.user={username:req.user.username};
-            console.log(sender)
             res.send(sender);
           } else {
             res.send(errMsg(err));
           }
         });
-      });
     };
   }
-
   //------------------------------
   // Delete
   //
   function getDeleteController(model) {
     return function (req, res) {
-      console.log('update', req.post);
-      // model.findById(req.params.id, function (err, result) {
-      //   if (err) {
-      //     res.send(errMsg(err));
-      //   } else {
-          
           var result=req.post;
           result.remove();
           result.save(function (err) {
@@ -124,11 +112,9 @@
               res.send(errMsg(err));
             }
           });
-      //   }
-      // });
     };
   }
-  var postid=function(req, res, next, id){
+  function postid(req, res, next, id){
     var mongoose = require('mongoose'),
     Post = mongoose.model('Post');
     Post.load(id, function (err, post) {
@@ -137,7 +123,7 @@
       req.post = post
       next()
     })
-}
+  }
 
   exports.initRoutesForModel = function (options) {
     var app = options.app,
