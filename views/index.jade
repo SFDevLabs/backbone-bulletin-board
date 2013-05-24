@@ -42,7 +42,10 @@ block bodyscripts
     |  <input class="title-edit" placeholder"Title"></input>
     |  <br>
     |  <textarea class="body-edit" placeholder"Body"></textarea>
-    |  <div class="username" >- <%= user.username %></div>
+    |  <div class="bottom-label">
+    |  <span class="username" >- <%= user.username %></span>
+    |  <span class="timestamp" >| <%= timeAgo %></span>
+    |  </div>
     |  <button href="javascript:null;"class="submit-update">Update</button>  
     |</div>
   script(type="text/javascript", src="javascripts/todos.js")
