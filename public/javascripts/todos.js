@@ -27,11 +27,8 @@ $(function ($, _, Backbone) {
         this.set({"title": this.defaults.title});
       }
     },
-
-    // Toggle the `done` state of this todo item.
-    toggle: function () {
-      this.save({done: !this.get("done")});
-    },
+    // timeago:function(){
+    // },
     // Remove this Todo and delete its view.
     clear: function () {
       this.destroy();
@@ -84,7 +81,9 @@ $(function ($, _, Backbone) {
 
     // Re-render the titles of the todo item.
     render: function () {
-      this.$el.html(this.template(this.model.toJSON()));
+      var JSON=this.model.toJSON()
+      JSON.timeAgo=$.timeago(this.model.get("createdAt"))
+      this.$el.html(this.template(JSON));
       this.input = this.$('.edit');
       this.bodyEdit = this.$(".title-edit")
       this.titleEdit = this.$(".body-edit")

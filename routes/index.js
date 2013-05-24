@@ -7,7 +7,7 @@
 
   function index(req, res) {
     res.render('index', { 
-        'title': 'Home'
+        'title': 'Bulletin Board Demo'
         , 'username':(req.user) ?  req.user.username: undefined
         , 'userid':(req.user) ?  req.user._id: undefined
       });
