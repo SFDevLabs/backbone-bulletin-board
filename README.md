@@ -36,11 +36,11 @@ $ mongod
 ```
 $ cd <path to directory>
 ```
-4. Install dependencies using the node package manger (npm).
+4. Install dependencies using the node package manger (npm):
 ```
 $ sudo npm install
 ```
-5. Start the server.
+5. Start the server:
 ```
 $ sudo npm start
 ```
