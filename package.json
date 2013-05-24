@@ -20,5 +20,6 @@
         , "passport-github": "latest"
         , "passport-google-oauth": "latest"
         , "nodemon": "latest"
+        , "underscore":"latest"
     }
 }

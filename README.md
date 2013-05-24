@@ -5,7 +5,7 @@ https://github.com/jeffj/Bullatin_Board_Board
 
 #### A demo of Backbone Webapp with Server API (CRUD) and Authentication.
 
-[See a DEMO](http://bbb.sfdevlabs.org/)
+[See a DEMO](http://sfdevlabs.com:3000/)
 
 ## Introduction
 
