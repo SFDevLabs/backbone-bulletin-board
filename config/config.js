@@ -3,7 +3,7 @@ module.exports = {
     production: {
       root: require('path').normalize(__dirname + '/..'),
       app: {
-        name: 'Nodejs Express Mongoose Demo'
+        name: 'Backbone Bulletin Board'
       },
       db: 'mongodb://localhost/backbone_passport',
       facebook: {
