@@ -8,16 +8,10 @@ block content
   .main-auth
     .loginOptions
       div
-        a(href="/auth/facebook") Login With Facebook 
-        | &nbsp;
-      div
         a(href="/auth/github") Login With GitHub
         | &nbsp;
-      div
+      div.show
         a(href="/auth/twitter") Login With Twitter
-        | &nbsp;
-      div
-        a(href="/auth/google") Login With Google
     .auth-box
       if (typeof errors !== 'undefined')
         .fade.in.alert.alert-block.alert-error
