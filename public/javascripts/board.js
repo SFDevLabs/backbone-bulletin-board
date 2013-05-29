@@ -13,7 +13,7 @@ $(function ($, _, Backbone) {
     // MongoDB uses _id as default primary key
     idAttribute: "_id",
 
-    // Default attributes for the todo item.
+    // Default attributes for the post item.
     defaults: function () {
       return {
         title: "empty post..."
@@ -21,7 +21,7 @@ $(function ($, _, Backbone) {
       };
     },
 
-    // Ensure that each todo created has `title`.
+    // Ensure that each post created has `title`.
     initialize: function () {
       if (!this.get("title")) {
         this.set({"title": this.defaults.title});
@@ -29,13 +29,13 @@ $(function ($, _, Backbone) {
     },
     // timeago:function(){
     // },
-    // Remove this Todo and delete its view.
+    // Remove this post and delete its view.
     clear: function () {
       this.destroy();
     }
   });
 
-  // Todo Collection
+  // Posts Collection
   // ---------------
 
   PostList = Backbone.Collection.extend({
@@ -48,13 +48,13 @@ $(function ($, _, Backbone) {
     },
   });
 
-  // Create our global collection of **Todos**.
+  // Create our global collection of **Post**.
   Posts = new PostList();
 
-  // Todo Item View
+  // Post Item View
   // --------------
 
-  // The DOM element for a todo item...
+  // The DOM element for a post item...
   PostView = Backbone.View.extend({
 
     //... is a list tag.
@@ -71,15 +71,15 @@ $(function ($, _, Backbone) {
         "click .submit-update"  : "update",
     },
 
-    // The TodoView listens for changes to its model, re-rendering. Since there's
-    // a one-to-one correspondence between a **Todo** and a **TodoView** in this
+    // The View listens for changes to its model, re-rendering. Since there's
+    // a one-to-one correspondence between a **Post** and a **PostView** in this
     // app, we set a direct reference on the model for convenience.
     initialize: function () {
       this.model.bind('change', this.render, this);
       this.model.bind('destroy', this.remove, this);
     },
 
-    // Re-render the titles of the todo item.
+    // Re-render the titles of the post item.
     render: function () {
       var JSON=this.model.toJSON()
       JSON.timeAgo=$.timeago(this.model.get("createdAt"))
@@ -138,9 +138,9 @@ $(function ($, _, Backbone) {
 
     },
 
-    // At initialization we bind to the relevant events on the `Todos`
+    // At initialization we bind to the relevant events on the `Post`
     // collection, when items are added or changed. Kick things off by
-    // loading any preexisting todos.
+    // loading any preexisting post.
     initialize: function () {
       this.inputTitle = this.$("#new-post-title");
       this.inputBody = this.$("#new-post-body");
@@ -171,12 +171,12 @@ $(function ($, _, Backbone) {
       $("#list").prepend(view.render().el);
     },
 
-    // Add all items in the **Todos** collection at once.
+    // Add all items in the **Posts** collection at once.
     addAll: function () {
       Posts.each(this.addOne);
     },
 
-    // If you hit return in the main input field, create new **Todo** model
+    // If you hit return in the main input field, create new **Post** model
     createOnEnter: function (e) {
       if (e.keyCode !== 13) { return; }
       if (!this.inputTitle.val()) { return; }
