@@ -85,8 +85,8 @@ $(function ($, _, Backbone) {
       JSON.timeAgo=$.timeago(this.model.get("createdAt"))
       this.$el.html(this.template(JSON));
       this.input = this.$('.edit');
-      this.bodyEdit = this.$(".title-edit")
-      this.titleEdit = this.$(".body-edit")
+      this.bodyEdit = this.$(".body-edit")
+      this.titleEdit = this.$(".title-edit")
       return this;
     },
 
