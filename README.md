@@ -21,10 +21,11 @@ This demo was written to illustrate how authentication can be added to multi-use
 - [Mongoose](http://mongoosejs.com/) - A MongoDB object modeling tool designed to work in an asynchronous environment.
 - [MongoDB](http://www.mongodb.org/) - A scalable, high-performance, open source NoSQL database.
 - [Passport](http://passportjs.org/) - Simple, unobtrusive authentication for Node.js.
+- [Timeago](http://timeago.yarp.com/) - jQuery plugin for automatically updating fuzzy timestamps.
 
 
 
-## Running the Demo locally
+## Running locally
 
 1. Install [node.js](http://nodejs.org/#download).
 2. Install [MongoDB](http://www.mongodb.org/downloads).
@@ -50,8 +51,9 @@ $ sudo npm start
 
 [Based on Backbone MVC](https://github.com/jamesor/todomvc/tree/939bf7a47d297562cfb61c453320dea281e24e83/labs/architecture-examples/backbone_node_mongo)
 
+[Auth Based on Madhums's Node Demo](https://github.com/madhums/nodejs-express-mongoose-demo)
+
 - [Jeff Jenkins](http://jenkinsj.com/) - Added Authentication Layer
-- [Jehan Trembeck](http://jehantremback.com/) - Backbone and FrontEnd
 
 ## License
 
