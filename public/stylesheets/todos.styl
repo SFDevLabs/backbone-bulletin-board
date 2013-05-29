@@ -1,16 +1,36 @@
 body
   font-family Helvetica Neue
-  background-color #FFEACB
   margin 0px
-  padding 5px
+  background-color #fff
+  margin-bottom 30px
 
+a
+  color #fff
+  font-size 1.1em
+.container
+	background-image url('../images/back-cork.jpg')
+	max-width 800px
+	margin auto
+	padding 5px
+	border-image url('../images/border.jpg') 10 10 repeat
+	border-width 20px
+.shaddow
+	-webkit-box-shadow 2px 9px 10px 3px rgb(190, 190, 190);
+	-moz-box-shadow 2px 9px 10px 3px rgb(190, 190, 190);
+	box-shadow 2px 9px 10px 3px rgb(190, 190, 190);
 button
   font-size 1.1em
 h1
   margin 5px
+  font-size 2.8em
+h2
+  margin 5px
+  font-size 1.2em
+#app, input, textarea
+  font-size 1.2em
+  font-family Comic sans ms
 #list
   list-style none
-  border-top 1px solid
   margin-top 25px
   border-color #555
 #new-post
@@ -19,14 +39,22 @@ h1
   font-size 20px
 #new-post-body
   font-size 20px
-header a
-	margin-left 5px
+
 header
+	padding 5px
+	margin-bottom 50px
 	.top-right
-		float right
+		color #222
+	a
+	 margin-left 5px
+	 color #666
 .heading
+	border-radius 5px
+	margin 20px auto
+	font-family Helvetica Neue
+	color #333
+	width 800px
 	text-align center
-	margin 20px
 .form-box
 	margin auto
 	width 300px
@@ -36,17 +64,26 @@ header
 		width 100%
 	.submit
 		float right
-.container
-	max-width 800px
-	margin auto
 .logo
 	text-align center
 .view
+  background-image: url(../images/tac.png), url(../images/tac.png);
+  background-position: right top, left top;
+  background-repeat: no-repeat;
   position: relative;
-  border-bottom 1px solid #777
-  border-color #555
-  margin 5px
-  padding 5px
+  background-color #fff
+  margin 7px 100px
+  padding 25px 5px 5px 5px;
+  border-radius 0px 5px 5px 0px
+  a
+  	color blue
+  .border
+  	width 50px
+  	height 100%
+  	position absolute
+  	left -50px
+  	top 0px
+  	background-image url('../images/paperborder.png')
 .title
   text-align center
 .bottom-label
@@ -58,6 +95,10 @@ header
 .login-prompt
 	width 100%
 	text-align center
+	font-family Helvetica Neue
+	a
+	  font-size 2em
+	  color #fff
 .control-box
   position absolute
   right 0px
@@ -87,4 +128,5 @@ header
 		display none
 	.submit-update
 		display inline-block
-
+.loginOptions
+	display none
