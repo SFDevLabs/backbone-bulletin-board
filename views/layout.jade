@@ -6,7 +6,8 @@ html
     block styles
   body
     include header
-    .container
+    block header
+    .container.shaddow
         block content
         script(type="text/javascript", src="/javascripts/vendor/jquery-1.7.2.min.js")
         script(type="text/javascript", src="/javascripts/vendor/jquery.timeago.min.js")

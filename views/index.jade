@@ -1,14 +1,15 @@
 extends layout
 block styles
   link(rel='stylesheet', href='/stylesheets/todos.css')
+block header
+    .heading
+        h1.mainheading
+          | Backbone Bulletin Board
+        h2.subheader
+          | Backbone.js demo with authentication
 block content
     #app
-      
-      .heading
-        h1.mainheading
-          | Bulletin Board Demo
-        .subheader
-          | Backbone.js with a CRUD API and Auth
+      br
       .form-box
         if (typeof username!="undefined") 
             input#new-post-title(type="text", placeholder="Title")
@@ -17,7 +18,6 @@ block content
             button.submit(href="javascript:null;")
               | Submit
         else
-          br
           .login-prompt
             a(href="/login")
               | Login to Post!
@@ -25,12 +25,12 @@ block content
         br
       section#main
         div#list
-  script
-    userid="#{userid}";
-
 block bodyscripts
+  script
+    username="#{username}";
   script#item-template(type="text/template")
     |<div class="view">
+    | <div class="border"></div>
     |  <div class="control-box">
     |  <% if (myPost == true) { %>
     |  <a class="edit" href="javascript:null;" class="destroy">&#9998;</a>
