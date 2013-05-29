@@ -8,10 +8,17 @@ block content
   .main-auth
     .loginOptions
       div
-        a(href="/auth/github") Login With GitHub
+        a(href="/auth/github") 
+          |Login With GitHub
+          br
+          img(src="../images/git.png")
         | &nbsp;
-      div.show
-        a(href="/auth/twitter") Login With Twitter
+      div
+        a(href="/auth/twitter") 
+          | Login With Twitter
+          br
+          img(src="../images/twitter.png")
+
     .auth-box
       if (typeof errors !== 'undefined')
         .fade.in.alert.alert-block.alert-error
