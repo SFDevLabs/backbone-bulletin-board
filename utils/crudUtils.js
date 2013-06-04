@@ -31,10 +31,10 @@
     };
   }
 
-  function parseResults(result, user){
+  function parseResults(result, user){ //Check if the logged in user is the author.
   var id 
   if (user) id=user._id; //setting the id if it exists;
-   for (var i = result.length - 1; i >= 0; i--) { 
+   for (var i = result.length - 1; i >= 0; i--) { //check if the id matches the user.
       if(String(id)==result[i].user || String(id)==result[i].user._id)
         result[i].myPost=true;
       else
@@ -47,7 +47,6 @@
   //
   function getCreateController(model) {
     return function (req, res) {
-      //console.log('create', req.user._id);
       var m = new model(req.body);
       m.user=req.user._id
       m.save(function (err) {
@@ -114,7 +113,7 @@
           });
     };
   }
-  function postid(req, res, next, id){
+  function postid(req, res, next, id){  //param function for wildcard :id of url
     var mongoose = require('mongoose'),
     Post = mongoose.model('Post');
     Post.load(id, function (err, post) {
@@ -144,7 +143,6 @@
     app.put(pathWithId, auth.requiresLogin, auth.post.hasAuthorization, getUpdateController(model));
     app.del(pathWithId, auth.requiresLogin, auth.post.hasAuthorization, getDeleteController(model));
     app.param('id', postid)
-
   };
 
 }(exports));
