@@ -1,13 +1,13 @@
-Backbone Bullatin Board Demo
+Backbone Bullatin Board 
 ===================
 
-#### A demo of Backbone.js and Node with authentication.
+#### Demonstrating backbone.js with authentication.
 
-[See a DEMO](http://sfdevlabs.com:3000/)
+[See a demo](http://sfdevlabs.com:3000/)
 
 ## Introduction
 
-This demo was written to illustrate how authentication can be added to multi-user Backbone.js app.
+This demo was written to illustrate how authentication can be added to multi-user app built on Backbone.js and Node.
 
 #### Technologies Used In This Demo
 
@@ -25,7 +25,7 @@ This demo was written to illustrate how authentication can be added to multi-use
 
 
 
-## Running locally
+## Running it on your machine
 
 1. Install [node.js](http://nodejs.org/#download).
 2. Install [MongoDB](http://www.mongodb.org/downloads).
