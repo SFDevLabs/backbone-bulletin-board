@@ -35,7 +35,9 @@
   var id 
   if (user) id=user._id; //setting the id if it exists;
    for (var i = result.length - 1; i >= 0; i--) { //check if the id matches the user.
-      if(String(id)==result[i].user || String(id)==result[i].user._id)
+      if (!result[i].user)
+        result[i].myPost=false;
+      else if(String(id)==result[i].user || String(id)==result[i].user._id)
         result[i].myPost=true;
       else
         result[i].myPost=false;
@@ -47,8 +49,15 @@
   //
   function getCreateController(model) {
     return function (req, res) {
-      var m = new model(req.body);
-      m.user=req.user._id
+      console.log(req.body)
+      var m = new model(
+        { body: req.body.body,
+          title: req.body.title,
+          createdAt: req.body.createdAt,
+          user : req.user._id
+        });
+      //m.user=req.user._id
+      console.log(m)
       m.save(function (err) {
         if (!err) {
           var sender=m.toJSON()
