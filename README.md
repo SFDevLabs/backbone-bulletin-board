@@ -3,7 +3,7 @@ Backbone Bullatin Board
 
 #### Demonstrating backbone.js with authentication.
 
-[See a demo](http://sfdevlabs.com:3000/)
+[See a demo](http://bbb.sfdevlabs.com/)
 
 ## Introduction
 
