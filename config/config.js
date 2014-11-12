@@ -5,7 +5,7 @@ module.exports = {
       app: {
         name: 'Backbone Bulletin Board'
       },
-      db: process.env.MONGOLAB_URI ,
+      db: process.env.MONGOLAB_URI||'mongodb://localhost/backbone_passport',
       facebook: {
           clientID: "APP_ID"
         , clientSecret: "APP_SECRET"

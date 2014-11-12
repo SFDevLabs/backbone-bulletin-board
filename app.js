@@ -65,6 +65,13 @@ if(process.env.VCAP_SERVICES){
 if(dbcreds){
   console.log(dbcreds);
   mongoose.connect(dbcreds.host, dbcreds.db, dbcreds.port, {user: dbcreds.username, pass: dbcreds.password});
+}if(process.env.MONGOLAB_URI){
+
+//'mongodb://heroku_app31519882:b1oj9ltgpc1mj0puodqi8lht5n@ds051970.mongolab.com:51970'
+  console.log('MONGOLAB_URI!')
+
+    mongoose.connect("heroku_app31519882:b1oj9ltgpc1mj0puodqi8lht5n@ds051970.mongolab.com", 'heroku_app31519882', 51970);
+
 }else{
   mongoose.connect("127.0.0.1", config.db.split("mongodb://localhost/")[1], 27017);
 }
